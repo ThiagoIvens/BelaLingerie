@@ -1,0 +1,46 @@
+
+html, body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Content */
+.content{
+    flex: 1 0 auto;
+}
+
+/* Navegation bar */
+.bg-navbar{
+    background-color: #8b3a5b;
+    border-bottom: 2px solid black;
+}
+
+/* Footer */
+footer {
+    background-color: #8b3a5b;
+    color: white;
+    flex-shrink: 0;
+    border-top: 2px solid black;
+}
+
+footer h4 {
+    color: white;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: salmon;
+}
+
+.footer-payments img{
+    max-height: 25px;
+    margin: 2px;
+}

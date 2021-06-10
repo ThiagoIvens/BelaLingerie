@@ -15,29 +15,59 @@ body{
 
 /* Navegation bar */
 .bg-navbar{
-    background-color: #8b3a5b;
-    border-bottom: 2px solid black;
+    background-color: #7D2E65;
+    border-bottom: 2px solid #FD94A9;
+}
+
+.navbar-light .navbar-brand{
+    color: #FD94A9;
+    font-size: 30px;
+}
+
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover{
+    color: #FFA3B6;
+}
+
+.nav-link{
+    color:#FD94A9;
+    font-size: 20px;
+}
+
+.nav-link:focus, .nav-link:hover{
+    color:white;
+}
+
+.logo-navbar{
+    max-width: 50px;
+    max-height: 50px;
+    margin-right: 5px;
+}
+
+/* CAROUSEL */
+.carousel-item{
+    height: 24rem;
+    background-color: #000;
 }
 
 /* Footer */
 footer {
-    background-color: #8b3a5b;
-    color: white;
+    background-color: #7D2E65;
+    color: #FD94A9;
     flex-shrink: 0;
-    border-top: 2px solid black;
+    border-top: 2px solid #FD94A9;
 }
 
 footer h4 {
-    color: white;
+    color: #FD94A9;
 }
 
 footer a {
-    color: white;
+    color: #FD94A9;
     text-decoration: none;
 }
 
 footer a:hover {
-    color: salmon;
+    color: white;
 }
 
 .footer-payments img{

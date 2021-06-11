@@ -1,0 +1,29 @@
+/* Navegation bar */
+.bg-navbar{
+    background-color: #7D2E65;
+    border-bottom: 2px solid #FD94A9;
+}
+
+.navbar-light .navbar-brand{
+    color: #FD94A9;
+    font-size: 30px;
+}
+
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover{
+    color: #FFA3B6;
+}
+
+.nav-link{
+    color:#FD94A9;
+    font-size: 20px;
+}
+
+.nav-link:focus, .nav-link:hover{
+    color:white;
+}
+
+.logo-navbar{
+    max-width: 50px;
+    max-height: 50px;
+    margin-right: 5px;
+}

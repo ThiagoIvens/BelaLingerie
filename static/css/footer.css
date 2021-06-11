@@ -1,0 +1,25 @@
+/* Footer */
+footer {
+    background-color: #7D2E65;
+    color: #FD94A9;
+    flex-shrink: 0;
+    border-top: 2px solid #FD94A9;
+}
+
+footer h4 {
+    color: #FD94A9;
+}
+
+footer a {
+    color: #FD94A9;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+}
+
+.footer-payments img{
+    max-height: 25px;
+    margin: 2px;
+}

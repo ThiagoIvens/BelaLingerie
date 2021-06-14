@@ -9,3 +9,6 @@ def produtos(request):
 
 def produto_detalhe(request, id):
     return render(request, 'geral/produto_detalhe.html')
+
+def about(request):
+    return render(request, 'geral/about.html')

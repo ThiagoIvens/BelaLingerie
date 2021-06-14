@@ -6,12 +6,27 @@ html, body{
 body{
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 /* Content */
 .content{
     flex: 1 0 auto;
 }
+ 
+body::-webkit-scrollbar {
+    width:10px;
+    height: 10px;
+}
 
+body::-webkit-scrollbar-track {
+    background-color:#FD94A9;
+}
 
+body::-webkit-scrollbar-thumb {
+    background-color: #7D2E65;
+}
 
+body::-webkit-scrollbar-button{
+    background-color: #7D2E65;
+}

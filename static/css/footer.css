@@ -23,3 +23,12 @@ footer a:hover {
     max-height: 25px;
     margin: 2px;
 }
+
+li{
+    list-style: none;
+}
+
+.ul-display-inline li{
+    display: inline;
+}
+

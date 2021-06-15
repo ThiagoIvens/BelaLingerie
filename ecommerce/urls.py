@@ -1,10 +1,10 @@
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
 from . import views
+
+app_name = "ecommerce"
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('produtos/', views.produtos, name='produtos'),
-    path('produto_detalhe/<id>/', views.produto_detalhe, name='produto_detalhe'),
     path('sobre/', views.about, name='about'),
 ]

@@ -10,3 +10,4 @@ from .models import User
 class UserAdmin(auth_admin.UserAdmin):
     form = UserChangeForm
     add_form = UserCreationForm
+    model = User

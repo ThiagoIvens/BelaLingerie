@@ -1,0 +1,77 @@
+{% extends 'index.html' %}
+
+{% load static %}
+{% load product_tags %}
+
+{% block title %}
+    {% if category %}
+        {{ category.name }}
+    {% else %}
+        Produtos
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-lg-3">
+                <ul class="list-group mb-3 mb-lg-0">
+                    <a class="text-decoration-none list-group-item list-group-item-light {% if not category %}active{% endif %}"
+                        href="{% url 'products:list' %}">
+                        Todos os produtos
+                    </a>
+
+                    {% for cat in categories %}
+                        <a class="text-decoration-none list-group-item list-group-item-light {% if category == cat %}active{% endif %}"
+                            href="{{ cat.get_absolute_url }}">
+                            {{ cat.name }}
+                        </a>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-9">
+        <div class="card-deck mb-3">
+            {% for product in product_list %}
+                <div class="container-xl">
+                    <div class="row">
+                        <div class="card">
+                            <a href="{{ product.get_absolute_url }}">
+                                {% if product.image %}
+                                    <img src="/media/{{product.image}}" alt="{{product.name}}" style="width:100%;">
+                                {% else %}
+                                    <img src="{% static 'media/products/no-image.png' %}" alt="{{product.name}}" style="width:100%;">
+                                {% endif %}
+                            </a>
+                            <h1>
+                                <a href="{{ product.get_absolute_url }}">
+                                    {{product.name}}
+                                </a>
+                            </h1>
+                            <p class="price">R$ {{product.price}}</p>
+                            <p>{{product.description}}</p>
+                            <p><button>Adicionar ao carrinho</button></p>
+                        </div>
+                    </div>
+                </div>
+            {% if forloop.counter|divisibleby:"3" and not forloop.last %}
+        </div>
+        <div class="card-deck mb-3">
+            {% endif %}
+            {% endfor %}
+
+            {% if product_list|length|remainder == 2 %}
+                <div class="card border-0"></div>
+            {% elif product_list|length|remainder == 1 %}
+                <div class="card border-0"></div>
+                <div class="card border-0"></div>
+            {% endif %}
+        </div>
+
+        {% if is_paginated %}
+            {% include 'includes/pagination.html' with page=page_obj %}
+        {% endif %}
+    </div>
+{% endblock %}

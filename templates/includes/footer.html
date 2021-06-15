@@ -4,11 +4,11 @@
             <div class="col">
                 <ul>
                     <h5>Departamentos</h5>
-                    <li><a href="{% url 'home' %}">Home</a></li>
-                    <li><a href="{% url 'about' %}">Quem somos</a></li>
+                    <li><a href="{% url 'ecommerce:home' %}">Home</a></li>
+                    <li><a href="{% url 'ecommerce:about' %}">Quem somos</a></li>
                     <li><a href="#">Contato</a></li>
                     <li><a href="#">Como comprar</a></li>
-                    <li><a href="#">Produtos</a></li>
+                    <li><a href="{% url 'products:list' %}">Produtos</a></li>
                     <li><a href="#">Termos de Uso</a></li>
                 </ul>
             </div>
@@ -28,9 +28,9 @@
             <div class="col">
                 <ul>
                     <h5>Novidades</h5>
-                    <li><a href="{% url 'home' %}">Home</a></li>
-                    <li><a href="#">Quem somos</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Novos</a></li>
+                    <li><a href="#">Destaques</a></li>
+                    <li><a href="#">Mais acessados</a></li>
                 </ul>
             </div>
         </div>

@@ -39,11 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # 3rd Party
-    'fontawesome-free',
+    'debug_toolbar',
+    'widget_tweaks',
     # My APP's
     'ecommerce',
     'users',
     'products',
+    'cart',
 ]
 
 MIDDLEWARE = [

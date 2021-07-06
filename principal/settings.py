@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import environ
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -49,6 +50,7 @@ INSTALLED_APPS = [
     'products',
     'cart',
     'orders',
+    'payments',
 ]
 
 MIDDLEWARE = [
@@ -143,5 +145,10 @@ CART_SESSION_ID = 'cart'
 CART_ITEM_MAX_QUANTITY = 20
 
 # Crispy
-
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Mercado Pago
+env = environ.Env()
+env.read_env(os.path.join(BASE_DIR, '.env'))
+MERCADO_PAGO_PUBLIC_KEY = env('MERCADO_PAGO_PUBLIC_KEY')
+MERCADO_PAGO_ACCESS_TOKEN = env('MERCADO_PAGO_ACCESS_TOKEN')

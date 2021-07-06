@@ -1,13 +1,14 @@
 from decimal import Decimal
 from products.models import Product
 import copy
+from django.conf import settings
 
 class Cart:
     def __init__(self, request):
-        if request.session.get('cart') is None:
-            request.session['cart'] = {}
+        if request.session.get(settings.CART_SESSION_ID) is None:
+            request.session[settings.CART_SESSION_ID] = {}
         
-        self.cart = request.session['cart']
+        self.cart = request.session[settings.CART_SESSION_ID]
         self.session = request.session
     
     def __iter__(self):

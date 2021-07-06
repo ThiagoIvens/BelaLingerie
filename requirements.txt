@@ -11,3 +11,6 @@ pytest-django==4.1.0
 fontawesome-free==5.15.3
 
 django-widget-tweaks==1.4.8
+
+django-crispy-forms==1.11.0
+django-localflavor==3.0.1

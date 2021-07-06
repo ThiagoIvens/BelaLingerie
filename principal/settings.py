@@ -41,11 +41,14 @@ INSTALLED_APPS = [
     # 3rd Party
     'debug_toolbar',
     'widget_tweaks',
+    'crispy_forms',
+    'localflavor',
     # My APP's
     'ecommerce',
     'users',
     'products',
     'cart',
+    'orders',
 ]
 
 MIDDLEWARE = [
@@ -134,3 +137,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # User Model
 AUTH_USER_MODEL = 'users.User'
+
+# CART
+CART_SESSION_ID = 'cart'
+CART_ITEM_MAX_QUANTITY = 20
+
+# Crispy
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

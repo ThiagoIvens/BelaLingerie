@@ -45,12 +45,12 @@ INSTALLED_APPS = [
     'crispy_forms',
     'localflavor',
     # My APP's
-    'ecommerce',
-    'users',
-    'products',
-    'cart',
-    'orders',
-    'payments',
+    'ecommerce.apps.EcommerceConfig',
+    'users.apps.UsersConfig',
+    'products.apps.ProductsConfig',
+    'cart.apps.CartConfig',
+    'orders.apps.OrdersConfig',
+    'payments.apps.PaymentsConfig',
 ]
 
 MIDDLEWARE = [

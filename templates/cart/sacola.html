@@ -3,12 +3,12 @@
 {% load static %}
 {% load widget_tweaks %}
 
-{% block title %}Sacola{% endblock title %}
+{% block title %}Meu Carrinho{% endblock title %}
 
 {% block content %}
 
-<div class="container my-3 table-responsive">
-    <h1 class="font-weight-bold">Sacola</h1>
+<div class="container my-3 table-responsive content">
+    <h1 class="font-weight-bold">Meu Carrinho</h1>
     {% if cart %}
     <table class="table">
         <thead>
@@ -64,7 +64,7 @@
         </tbody>
     </table>
     {% else %}
-    <p>A sacola está vazia!</p>
+    <p>O carrinho está vazio!</p>
     {% endif %}
     <p class="text-right">
         <a class=" btn btn-primary" href="{% url 'products:list' %}">

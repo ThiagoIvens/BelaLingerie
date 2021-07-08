@@ -12,6 +12,7 @@ body{
 /* Content */
 .content{
     flex: 1 0 auto;
+    overflow: hidden;
 }
  
 body::-webkit-scrollbar {

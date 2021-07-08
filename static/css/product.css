@@ -1,9 +1,11 @@
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 #7D2E65;
     max-width: 300px;
     margin: auto;
     text-align: center;
     font-family: arial;
+    height: 500px;
+    border: #7D2E65;
   }
   
   .price {
@@ -25,4 +27,31 @@
   
   .card button:hover {
     opacity: 0.7;
+  }
+
+  .card a {
+    color: #7D2E65;
+  }
+
+  .card a:hover {
+    color: #7D2E65;
+    text-decoration: none;
+  }
+
+  .border-0 {
+    box-shadow: none;
+  }
+
+  a.text-decoration-none.list-group-item.list-group-item-light{
+    color: #7D2E65;
+  }
+
+  a.text-decoration-none.list-group-item.list-group-item-light.active{
+    background-color: #7D2E65;
+    color: #FD94A9;
+    border-color: #7D2E65;
+  }
+
+  a.text-decoration-none.list-group-item.list-group-item-light:hover{
+    color: #FD94A9;
   }
